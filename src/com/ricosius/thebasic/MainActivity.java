@@ -17,7 +17,8 @@ public class MainActivity extends Activity {
         logoMusic = MediaPlayer.create(MainActivity.this, R.raw.southafrica );
         logoMusic.start();
         Thread logoTimer = new Thread(){
-        	public void run(){
+        	@Override
+			public void run(){
         		try{
         			sleep(5000);
         			Intent menuIntent = new Intent("com.ricosius.thebasic.MENU");
